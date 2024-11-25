@@ -145,6 +145,7 @@ gradle-app.setting
 # End of https://www.toptal.com/developers/gitignore/api/netbeans,intellij,java,gradle,eclipse
 application/db/
 config.json
+application/config.json
 *.db
 *.db-shm
 *.db-wal
@@ -158,3 +159,17 @@ logviewer/types.d.ts
 logviewer/pnpm-lock.yaml
 logviewer/webpack.config.js
 logviewer/webpack.generated.js
+.DS_Store
+
+# VisualStudioCode
+.vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
