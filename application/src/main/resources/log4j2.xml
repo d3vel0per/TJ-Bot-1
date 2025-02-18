@@ -13,18 +13,15 @@
                 <SizeBasedTriggeringPolicy size="10 MB"/>
             </Policies>
         </RollingFile>
-        <Http name="Http" url="http://${env:TJ_LOG_TARGET:-localhost}:5050/rest/api/logs">
-            <JsonLayout/>
-        </Http>
-        <Async name="AsyncHttp">
-            <AppenderRef ref="Http"/>
-        </Async>
     </Appenders>
     <Loggers>
+        <!-- Change this level to see more of our logs -->
+        <Logger name="org.togetherjava.tjbot" level="info"/>
+
+        <!-- Change this level to see more logs of everything (including JDA) -->
         <Root level="info">
             <AppenderRef ref="Console"/>
             <AppenderRef ref="File"/>
-            <AppenderRef ref="AsyncHttp"/>
         </Root>
     </Loggers>
 </Configuration>
